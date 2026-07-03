@@ -76,7 +76,7 @@ python 01_train.py
   - `outputs/training_curve.png` (정확도/손실 그래프)
 - CPU만 있는 노트북 기준 약 5~15분 정도 걸릴 수 있습니다.
   (느리다면 `01_train.py`의 `EPOCHS` 값을 줄여도 됩니다)
-![결과](.outputs/training_curve.png)
+![결과](outputs/training_curve.png)
 
 ### 2단계 — 레이어별 액티베이션 맵 시각화
 ```bash
