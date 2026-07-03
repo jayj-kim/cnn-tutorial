@@ -20,8 +20,9 @@ sudo apt install python3-pip python3-venv -y
 ```
 - 프로젝트용 가상환경 생성(프로젝트 폴더에서 수행)
 ```bash
-cd 프로젝트 폴더
-python3 -m venv tf_env
+cd ~
+mkdir -p projects && cd projects
+sudo python3 -m venv tf_env
 source tf_env/bin/activate
 ```
 - 패키지 설치
