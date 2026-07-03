@@ -12,8 +12,23 @@
   **Google Colab**(무료 GPU 제공) 사용을 추천합니다.
 
 ## 설치
-
+- WSL에서 실행시
 ```bash
+sudo apt update && sudo apt upgrade -y
+python3 --version   # WSL Ubuntu는 보통 python3.10~3.12 기본 포함
+sudo apt install python3-pip python3-venv -y
+```
+-프로젝트용 가상환경 생성
+```bash
+cd ~
+mkdir -p projects && cd projects
+python3 -m venv tf_env
+source tf_env/bin/activate
+```
+-패키지 설치
+  - 프로젝트 폴더 안에서
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
