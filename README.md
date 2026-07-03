@@ -30,8 +30,12 @@ source tf_env/bin/activate
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+pip install tensorflow[and-cuda]
 ```
-
+- GPU 인식 확인
+```bash
+nvidia-smi   #GPU 정보가 나오면 GPU를 인식하고 있는 것임
+```
 ## 실행 순서
 
 ### 1단계 — 모델 학습
