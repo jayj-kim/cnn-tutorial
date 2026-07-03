@@ -89,6 +89,7 @@ python 02_visualize_activations.py
   - `conv1.png`, `conv2.png`, `conv3.png` (레이어별 특징 맵 8채널)
 - **관찰 포인트**: 레이어가 깊어질수록 특징 맵의 가로/세로 크기는 작아지고,
   표현하는 특징은 선/경계 → 무늬/질감 → 사물의 부분처럼 점점 추상적으로 바뀝니다.
+  
 ![input](outputs/activations/00_input.png)
 ![conv1](outputs/activations/conv1.png)
 ![conv2](outputs/activations/conv2.png)
