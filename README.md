@@ -89,6 +89,10 @@ python 02_visualize_activations.py
   - `conv1.png`, `conv2.png`, `conv3.png` (레이어별 특징 맵 8채널)
 - **관찰 포인트**: 레이어가 깊어질수록 특징 맵의 가로/세로 크기는 작아지고,
   표현하는 특징은 선/경계 → 무늬/질감 → 사물의 부분처럼 점점 추상적으로 바뀝니다.
+![input](outputs/activations/00_input.png)
+![conv1](outputs/activations/conv1.png)
+![conv2](outputs/activations/conv2.png)
+![conv3](outputs/activations/conv3.png)
 
 ### 3단계 — 테스트 예측 결과 시각화
 ```bash
@@ -98,6 +102,8 @@ python 03_test_predictions.py
   이미지와 함께 보여줍니다. 정답은 초록색, 오답은 빨간색 제목으로 표시됩니다.
 - 결과물: `outputs/test_predictions.png`
 - 전체 테스트셋(10,000장) 기준 정확도도 콘솔에 출력됩니다.
+
+![예측시각화](outputs/test_predictions.png)
 
 ### 4단계 — CPU vs GPU 학습 속도 비교
 ```bash
@@ -111,6 +117,7 @@ python 04_benchmark_cpu_gpu.py
   2. 상단 메뉴 [런타임] → [런타임 유형 변경] → 하드웨어 가속기를 **GPU**로 설정
   3. 이 폴더의 파일들을 업로드하고 `04_benchmark_cpu_gpu.py` 실행
   4. 같은 코드를 하드웨어 가속기 **None(CPU)** 설정으로 다시 실행해서 두 결과를 비교
+![CPU GPU 비교](outputs/test_predictions.png)
 
 ## 전체 구조 요약
 
