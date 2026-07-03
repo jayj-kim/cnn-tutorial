@@ -6,6 +6,7 @@
 
 ## 준비물
 
+- Ubuntu-24.04
 - Python 3.9 이상
 - 인터넷 연결 (첫 실행 시 CIFAR-10 데이터셋 자동 다운로드, 약 170MB)
 - GPU는 없어도 됩니다. GPU/CPU 속도를 비교하고 싶다면 4단계는
@@ -26,11 +27,35 @@ sudo python3 -m venv tf_env
 source tf_env/bin/activate
 ```
 - 패키지 설치
-  - 프로젝트 폴더 안에서
+  - WSL에서 사용시 아래 명령어 수행
+```bash
+#NVIDIA Container Toolkit 저장소 추가
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
+sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+sudo apt update
+
+sudp apt install -y nvidia-container-toolkit
+
+#docker 내 cuda 잡히는지 확인
+sudo docker run --gpus all --rm nvcr.io/nvidia/tensorflow:25.02-tf2-py3
+
+#docker 실행
+sudo docker run --gpus all --rm -it -p 8888:8888 -v "$PWD":/workspace -w /workspace nvcr.io/nvidia/tensorflow:25.02-tf2-py3 bash
+```
+  - Ubuntu native 환경에서는 하기 명령어 실행
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 pip install tensorflow[and-cuda]
+```
+  - pip 명령어 오류 발생할 경우(WSL 환경에서 permissions 오류시
+```bash
+sudo chown -R $USER:$USER /path/to/your/venv
 ```
 - GPU 인식 확인
 ```bash
