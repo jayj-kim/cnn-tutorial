@@ -18,10 +18,9 @@ sudo apt update && sudo apt upgrade -y
 python3 --version   # WSL Ubuntu는 보통 python3.10~3.12 기본 포함
 sudo apt install python3-pip python3-venv -y
 ```
-- 프로젝트용 가상환경 생성
+- 프로젝트용 가상환경 생성(프로젝트 폴더에서 수행)
 ```bash
-cd ~
-mkdir -p projects && cd projects
+cd 프로젝트 폴더
 python3 -m venv tf_env
 source tf_env/bin/activate
 ```
