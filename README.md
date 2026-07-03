@@ -46,6 +46,9 @@ sudo docker run --gpus all --rm nvcr.io/nvidia/tensorflow:25.02-tf2-py3
 
 #docker 실행
 sudo docker run --gpus all --rm -it -p 8888:8888 -v "$PWD":/workspace -w /workspace nvcr.io/nvidia/tensorflow:25.02-tf2-py3 bash
+
+#docker 실행 후
+pip install matplotlib
 ```
   - Ubuntu native 환경에서는 하기 명령어 실행
 ```bash

@@ -96,8 +96,8 @@ def main():
     # 막대 그래프로 저장
     plt.figure(figsize=(5, 4))
     plt.bar(results.keys(), results.values(), color=['gray', 'orange'][:len(results)])
-    plt.ylabel('학습 시간 (초)')
-    plt.title(f'CPU vs GPU 학습 속도 비교\n({BENCH_EPOCHS} epoch, 10,000장 기준)')
+    plt.ylabel('Training time (sec)')
+    plt.title(f'CPU vs GPU Training Speed Comparison\n({BENCH_EPOCHS} epochs, 10,000 images)')
     for i, (device, elapsed) in enumerate(results.items()):
         plt.text(i, elapsed, f"{elapsed:.1f}s", ha='center', va='bottom')
     plt.tight_layout()

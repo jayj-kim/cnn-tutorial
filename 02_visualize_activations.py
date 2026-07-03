@@ -79,8 +79,8 @@ for layer_name, activation in zip(conv_layer_names, activations):
         axes[i].set_title(f"ch{i}", fontsize=8)
 
     fig.suptitle(
-        f"{layer_name}  (특징 맵 크기: {activation.shape[1]}x{activation.shape[2]}, "
-        f"총 채널 수: {num_channels})",
+        f"{layer_name}  (feature map size: {activation.shape[1]}x{activation.shape[2]}, "
+        f"total channels: {num_channels})",
         fontsize=10,
     )
     plt.tight_layout()

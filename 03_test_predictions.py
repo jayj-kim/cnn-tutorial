@@ -59,10 +59,10 @@ for i, ax in enumerate(axes.flat):
     correct_count += int(is_correct)
     color = 'green' if is_correct else 'red'
 
-    ax.set_title(f"정답: {true_name}\n예측: {pred_name} ({conf:.0f}%)",
+    ax.set_title(f"true: {true_name}\npred: {pred_name} ({conf:.0f}%)",
                  fontsize=9, color=color)
 
-fig.suptitle(f"테스트 샘플 16장 중 {correct_count}장 정답", fontsize=13)
+fig.suptitle(f"{correct_count} / 16 correct", fontsize=13)
 plt.tight_layout()
 plt.savefig("outputs/test_predictions.png", dpi=120, bbox_inches='tight')
 print("저장 완료: outputs/test_predictions.png")
