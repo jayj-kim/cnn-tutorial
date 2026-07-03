@@ -118,7 +118,7 @@ python 04_benchmark_cpu_gpu.py
   2. 상단 메뉴 [런타임] → [런타임 유형 변경] → 하드웨어 가속기를 **GPU**로 설정
   3. 이 폴더의 파일들을 업로드하고 `04_benchmark_cpu_gpu.py` 실행
   4. 같은 코드를 하드웨어 가속기 **None(CPU)** 설정으로 다시 실행해서 두 결과를 비교
-![CPU GPU 비교](outputs/test_predictions.png)
+![CPU GPU 비교](outputs/cpu_gpu_benchmark.png)
 
 ## 전체 구조 요약
 
