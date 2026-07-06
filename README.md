@@ -49,6 +49,11 @@ sudo docker run --gpus all --rm -it -p 8888:8888 -v "$PWD":/workspace -w /worksp
 
 #docker 실행 후
 pip install matplotlib
+
+#docker 종료 및 재접속시 데이터 유실 방지 방법
+#1. exit 후 아래 명령어
+sudo docker start my_tf_workspace
+sudo docker exec -it my_tf_workspace bash
 ```
   - Ubuntu native 환경에서는 하기 명령어 실행
 ```bash
